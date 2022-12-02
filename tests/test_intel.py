@@ -44,8 +44,9 @@ class TestIntel:
             tests["get_vulnerabilities"] = falcon.get_vulnerabilities(ids="12345678")
             tests["query_vulnerabilities"] = falcon.query_vulnerabilities()
         for key in tests:
+            #if tests[key]["status_code"] not in AllowedResponses and tests[key].status_code not in AllowedResponses:
             if tests[key]["status_code"] not in AllowedResponses:
-                # print(tests[key])    
+                # print(tests[key]) 
                 error_checks = False
 
             # print(f"{key} operation returned a {tests[key]} status code")
